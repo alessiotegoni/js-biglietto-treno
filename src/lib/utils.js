@@ -4,12 +4,10 @@ const getUserAge = () => Number(prompt("Quanti anni hai?"));
 const calcPriceWithDiscount = (partialPrice, discountValue) =>
   partialPrice - (partialPrice * discountValue) / 100;
 
-const calcPartialPrice = (userKm) => userKm * PRICE_FOR_KM;
+const calcTotalPrice = (userKm, userAge) => {
+  const partialPrice = userKm * PRICE_FOR_KM;
 
-const calcTotalPrice = (partialPrice, userAge) => {
   let discountValue;
-
-  userAge = Number(userAge);
 
   if (userAge < 18) discountValue = MINOR_DISCOUNT;
   if (userAge > 65) discountValue = OVER_AGED_DISCOUNT;

@@ -5,9 +5,7 @@ function init() {
   if (isNaN(userKm) || isNaN(userAge))
     return console.error("I kilometri e l'eta devono essere numeri validi");
 
-  const partialPrice = calcPartialPrice(userKm);
-
-  const totalPrice = calcTotalPrice(partialPrice, userAge);
+  const totalPrice = calcTotalPrice(partialPrice, userKm, userAge);
 
   console.log("Ticket price:", totalPrice);
 }
