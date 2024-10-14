@@ -1,0 +1,4 @@
+const PRICE_FOR_KM = 0.21;
+
+const MINOR_DISCOUNT = 20
+const OVER_AGED_DISCOUNT = 40;
