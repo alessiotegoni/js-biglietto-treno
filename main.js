@@ -2,9 +2,7 @@ function init() {
   const userKm = getUserKm();
   const userAge = getUserAge();
 
-  if (!userKm || !userAge) return alert("Campi obbligatori");
-
-  if ([userKm, userAge].every((p) => isNaN(p)))
+  if (isNaN(userKm) || isNaN(userAge))
     return console.error("I kilometri e l'eta devono essere numeri validi");
 
   const partialPrice = calcPartialPrice(userKm);

@@ -1,5 +1,5 @@
-const getUserKm = () => prompt("Quanti chilometri vuoi percorrere?");
-const getUserAge = () => prompt("Quanti anni hai?");
+const getUserKm = () => Number(prompt("Quanti chilometri vuoi percorrere?"));
+const getUserAge = () => Number(prompt("Quanti anni hai?"));
 
 const calcPriceWithDiscount = (partialPrice, discountValue) =>
   partialPrice - (partialPrice * discountValue) / 100;
